@@ -28,13 +28,13 @@ const init = () => {
     document.body.appendChild(btn);
     btn.textContent = "Nacisnij przycisk";
     const btnDelete = document.createElement("button");
-document.body.appendChild(btnDelete);
-btnDelete.textContent="Usuń element";
-btnDelete.addEventListener("click", function () {
-    document.querySelector('ul').textContent="";
-    orderElement = 1;
-    size = 10;
-});
+    document.body.appendChild(btnDelete);
+    btnDelete.textContent = "Usuń element";
+    btnDelete.addEventListener("click", function () {
+        document.querySelector('ul').textContent = "";
+        orderElement = 1;
+        size = 10;
+    });
 
     const list = document.createElement("ul");
     document.body.appendChild(list);
@@ -53,4 +53,3 @@ const createLiElements = () => {
 };
 
 init();
-
