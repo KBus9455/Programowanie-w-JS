@@ -23,7 +23,7 @@ const changeColor = (e) => {
         blue >=0 ? blue-- : blue;
         document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
         break;
-    }
+    };};
     /*
     const changeColor = (e) => {
       let x = e.keyCode;
