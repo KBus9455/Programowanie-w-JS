@@ -10,11 +10,38 @@ const changeDots = () => {
     dotSpans[i].classList.add('active');
 }
 const change = () => {
+    i++;
+    if (i >= images.length) i = 0;
+    console.log(i);
     img.src = images[i];
     h1.textContent = texts[i];
     changeDots();
-    i++;
-    if (i >= images.length) i = 0;
-}
 
-setInterval(change, time)
+};
+let indexInterval = setInterval(change, time);
+
+const keyChangeSlide = (e) => {
+    let key = e.keyCode;
+    console.log(key);
+    if (key === 37) {
+        clearInterval(indexInterval);
+        i--;
+        if (i <0 ) {
+            i = images.length - 1;
+        };
+        console.log(i + "-");
+    };
+    if (key === 39) {
+        clearInterval(indexInterval);
+        i++;
+        if (i === images.length) {
+            i = 0;
+        };
+        console.log(i + "+");
+    };
+    img.src = images[i];
+    h1.textContent = texts[i];
+    changeDots();
+    indexInterval = setInterval(change, time)
+}
+window.addEventListener('keydown', keyChangeSlide);
