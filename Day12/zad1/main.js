@@ -6,5 +6,6 @@ const add = () => {
         document.body.textContent = `stan licznika wynosi: ${number}`;
     }
 }
+
 const clickCounter = add();
 window.addEventListener('click', clickCounter)
