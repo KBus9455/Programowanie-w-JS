@@ -1,4 +1,4 @@
-// http://websamuraj.pl/examples/js/projekt11/
+
 const startPauseBtn = document.querySelector(".main");
 const resetBtn = document.querySelector(".reset");
 const display = document.querySelector(".time div");
